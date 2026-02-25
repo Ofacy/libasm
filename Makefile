@@ -18,7 +18,7 @@ ARFLAG = -crs
 
 SRCS_DIR = srcs
 
-SRCS =	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s
+SRCS =	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s
 
 OUTDIR = obj
 
@@ -32,7 +32,8 @@ test_executables = \
 	tests/ft_strlen/tests \
 	tests/ft_strcpy/tests \
 	tests/ft_strcmp/tests \
-	tests/ft_write/tests
+	tests/ft_write/tests \
+	tests/ft_read/tests
 
 .PHONY: all
 all: $(NAME)
@@ -55,7 +56,7 @@ fclean: clean
 .PHONY: re
 re: fclean $(NAME)
 
-%/tests:
+%/tests: FORCE
 	make -C $(dir $@)
 
 .PHONY: test
@@ -63,5 +64,8 @@ test: all $(test_executables)
 	@for test in $(test_executables); do \
 		$$test;\
 	done
+
+.PHONY: FORCE
+FORCE:
 
 -include $(DEP)
