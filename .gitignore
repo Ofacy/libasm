@@ -1,3 +1,5 @@
 a.out
 libasm.a
 obj
+.build
+*.log
