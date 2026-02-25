@@ -18,7 +18,7 @@ ARFLAG = -crs
 
 SRCS_DIR = srcs
 
-SRCS =	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s ft_strdup.s ft_list_push_front.s ft_list_size.s
+SRCS =	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s ft_strdup.s ft_list_push_front.s ft_list_size.s ft_list_remove_if.s
 
 OUTDIR = obj
 
