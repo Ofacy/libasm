@@ -18,7 +18,7 @@ ARFLAG = -crs
 
 SRCS_DIR = srcs
 
-SRCS =	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s ft_strdup.s ft_list_push_front.s
+SRCS =	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s ft_strdup.s ft_list_push_front.s ft_list_size.s
 
 OUTDIR = obj
 
@@ -34,7 +34,10 @@ test_executables = \
 	tests/ft_strcmp/tests \
 	tests/ft_write/tests \
 	tests/ft_read/tests \
-	tests/ft_strdup/tests
+	tests/ft_strdup/tests \
+	tests/ft_list_push_front/tests \
+	tests/ft_list_size/tests \
+
 
 .PHONY: all
 all: $(NAME)
