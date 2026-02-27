@@ -6,7 +6,7 @@
 #    By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/13 00:31:16 by ibertran          #+#    #+#              #
-#    Updated: 2026/02/25 20:25:56 by lcottet          ###   ########lyon.fr    #
+#    Updated: 2026/02/27 18:01:32 by lcottet          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,13 @@ SRCS = \
 FT_STRLEN_DIR = results/
 FT_STRLEN_SRC = \
 				00_main.c \
-				basic.c
+				basic.c \
+				empty.c \
+				remove_all.c \
+				remove_half.c \
+				remove_odd.c \
+				remove_even.c
+				
 
 BUILD_DIR := .build/
 

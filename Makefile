@@ -37,6 +37,7 @@ test_executables = \
 	tests/ft_strdup/tests \
 	tests/ft_list_push_front/tests \
 	tests/ft_list_size/tests \
+	tests/ft_list_remove_if/tests \
 
 
 .PHONY: all

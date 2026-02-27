@@ -27,6 +27,8 @@ int test_basic() {
 		printf("ft_list_push_front failed: expected head data 'second', got '%s'\n", (char *)head->data);
 		return 1;
 	}
+	if (head->next->next != NULL)
+		return 1;
 	free(head);
 	return 0;
 }

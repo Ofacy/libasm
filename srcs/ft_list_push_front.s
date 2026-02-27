@@ -28,7 +28,5 @@ ft_list_push_front:
 
 
 .malloc_failed:
-	pop rsi
-	pop rdi
 	mov rax, 0
 	jmp .end
