@@ -11,7 +11,7 @@ ft_strcpy:
 	mov byte [rdi], DL	; move char to dest buffer
 	inc rdi				;
 	inc rsi				; increment both buffer pointers
-	jmp .strcpy_loop		;
+	jmp .strcpy_loop	;
 .end:
 	mov byte [rdi], 0	; \0 at end of string
 	ret					;
