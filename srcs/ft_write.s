@@ -14,7 +14,7 @@ ft_write:
 	jge .end				; if rax >= 0 then return value is number of bytes written
 	neg rax					; convert negative error code to positive
 	mov rdi, rax			; move error code to rdi for errno
-	call __errno_location	; get pointer to errno
+	call __errno_location WRT ..plt	; get pointer to errno
 	mov [rax], rdi			; set errno to error code
 	mov rax, -1				; return -1 on error
 	jmp .end				; jump to end

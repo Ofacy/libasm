@@ -41,7 +41,7 @@ ft_list_remove_if:
 	call rcx						; free node data
 .free_node:
 	mov rdi, r13					; set node ptr as argument for free
-	call free						; free node
+	call free WRT ..plt				; free node
 	pop rdx
 	pop rsi
 	pop rcx

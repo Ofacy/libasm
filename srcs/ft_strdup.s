@@ -12,7 +12,7 @@ ft_strdup:
 	inc rax					; add 1 for null terminator
 	push rcx				; save original string pointer on stack for later use
 	mov rdi, rax			; set size for malloc in rdi
-	call malloc				; allocate memory for new string, pointer returned in rax
+	call malloc WRT ..plt	; allocate memory for new string, pointer returned in rax
 	pop rcx					; restore original string pointer from stack to rcx
 	cmp rax, 0				; check if malloc failed
 	je .malloc_failed		; malloc failed, jump to error handling
