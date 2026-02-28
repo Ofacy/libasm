@@ -67,7 +67,11 @@ re: fclean $(NAME)
 .PHONY: test
 test: all $(test_executables)
 	@for test in $(test_executables); do \
-		valgrind -q $$test;\
+		echo "Running $$test..."; \
+		if ! $$test; then \
+			echo "Test $$test failed!"; \
+			exit 1; \
+		fi; \
 	done
 
 .PHONY: FORCE
