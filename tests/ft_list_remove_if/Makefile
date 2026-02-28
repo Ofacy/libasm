@@ -6,7 +6,7 @@
 #    By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/13 00:31:16 by ibertran          #+#    #+#              #
-#    Updated: 2026/02/27 18:01:32 by lcottet          ###   ########lyon.fr    #
+#    Updated: 2026/02/28 18:41:23 by lcottet          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,14 +45,13 @@ LIB_NAME	=	ft \
 
 LIB_PATH 	=	\
 				$(LIBASM_PATH)/libasm.a \
-				$(LIBUNIT_PATH)/libft/libft.a \
-				$(LIBUNIT_PATH)/framework/libunit_bonus.a
+				$(LIBUNIT_PATH)/framework/libunit_bonus.a \
+				$(LIBUNIT_PATH)/libft/libft.a
 
 HEADERS	= tests.h
 
 INCLUDES	=	$(HEADERS_DIR) \
 				$(LIBUNIT_PATH)/framework/includes \
-				$(LIB_PATH) \
 				$(dir $(HEADERS)) \
 
 # *** CONFIG ***************************************************************** #
