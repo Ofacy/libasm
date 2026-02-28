@@ -14,7 +14,9 @@ ft_strcmp:
 	inc rdx						;
 	jmp .loop					;
 .end:
-	mov rax, [rdi + rdx]		; get char from s1
-	mov r12, [rsi + rdx]		; get char from s2
-	sub rax, r12				; return difference
+	mov al, [rdi + rdx]			; get char from s1
+	mov bl, [rsi + rdx]			; get char from s2
+	movzx rax, al				; zero-extend char to return value
+	movzx rbx, bl				; zero-extend char to return value
+	sub rax, rbx				; return difference between
 	ret							;

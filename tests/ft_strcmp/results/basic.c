@@ -16,12 +16,16 @@ int test_basic() {
 		printf("ft_strcmp failed: expected 0, got %d\n", ft_strcmp("abc", "abc"));
 		return 1;
 	}
-	if (ft_strcmp("abc", "abd") >= 0) {
-		printf("ft_strcmp failed: expected negative value, got %d\n", ft_strcmp("abc", "abd"));
+	if (ft_strcmp("abc\0AA", "abd\0AA") >= 0) {
+		printf("ft_strcmp failed: expected negative value, got %d\n", ft_strcmp("abc\0AA", "abd\0AA"));
 		return 1;
 	}
-	if (ft_strcmp("abd", "abc") <= 0) {
-		printf("ft_strcmp failed: expected positive value, got %d\n", ft_strcmp("abd", "abc"));
+	if (ft_strcmp("abd\0AA", "abc\0AA") <= 0) {
+		printf("ft_strcmp failed: expected positive value, got %d\n", ft_strcmp("abd\0AA", "abc\0AA"));
+		return 1;
+	}
+	if (ft_strcmp("abc", "abcd") >= 0) {
+		printf("ft_strcmp failed: expected negative value, got %d\n", ft_strcmp("abc", "abcd"));
 		return 1;
 	}
 	return 0;
