@@ -11,14 +11,14 @@
 # **************************************************************************** #
 
 AS = nasm
-ASFLAG = -g -felf64
+ASFLAG = -g -felf64 -Wall -Werror
 
 AR = ar
 ARFLAG = -crs
 
 SRCS_DIR = srcs
 
-SRCS =	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s ft_strdup.s ft_list_push_front.s ft_list_size.s ft_list_remove_if.s
+SRCS =	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s ft_strdup.s ft_list_push_front.s ft_list_size.s ft_list_remove_if.s ft_list_sort.s
 
 OUTDIR = obj
 
@@ -38,6 +38,7 @@ test_executables = \
 	tests/ft_list_push_front/tests \
 	tests/ft_list_size/tests \
 	tests/ft_list_remove_if/tests \
+	tests/ft_list_sort/tests
 
 
 .PHONY: all

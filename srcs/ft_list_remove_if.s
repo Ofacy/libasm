@@ -11,7 +11,7 @@ endstruc
 
 ft_list_remove_if:
 .loop:
-	mov r13, [ rdi ]				; store current node ptr in r8
+	mov r13, [ rdi ]				; store current node ptr in r13
 	cmp r13, 0
 	je .end
 	push rdi						; save current node pointer pointer for later
