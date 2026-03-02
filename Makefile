@@ -18,7 +18,7 @@ ARFLAG = -crs
 
 SRCS_DIR = srcs
 
-SRCS =	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s ft_strdup.s ft_list_push_front.s ft_list_size.s ft_list_remove_if.s ft_list_sort.s
+SRCS =	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s ft_strdup.s ft_list_push_front.s ft_list_size.s ft_list_remove_if.s ft_list_sort.s ft_atoi_base.s
 
 OUTDIR = obj
 
@@ -38,7 +38,8 @@ test_executables = \
 	tests/ft_list_push_front/tests \
 	tests/ft_list_size/tests \
 	tests/ft_list_remove_if/tests \
-	tests/ft_list_sort/tests
+	tests/ft_list_sort/tests \
+	tests/ft_atoi_base/tests
 
 
 .PHONY: all
